@@ -73,7 +73,8 @@ module Window =
         
         let updatedContex = update context
 
-        mainLoop updatedContex
+        if Application.OpenForms.Count > 0 then
+            mainLoop updatedContex
 
     let run (window: Window) =  
         let init args = 
